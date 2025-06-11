@@ -1,11 +1,12 @@
-const express = require("express");
+const express = require("express"); // ✅ 只保留這一行
 const line = require("@line/bot-sdk");
 const fs = require("fs");
 const csv = require("csv-parser");
 const path = require("path");
 
-const app = express();
+const app = express(); // ✅ 這一行當然要保留
 const port = process.env.PORT || 3000;
+
 
 const config = {
   channelAccessToken: "rw3FhodzOY8eB+G0CRyhKjW31Oezn4lIbkUBV8pUtsVoHcjD5dpj1tRdKnL9CIOUX702fQTNPQSHRI8dsIFPaIudFfsT45asUsSPdnU6gxG15uWYmXw4hZ5Tb9kNm2eYw7t/oLxNMhcGKvcYEgy/IgdB04t89/1O/w1cDnyilFU=",
@@ -309,6 +310,6 @@ function formatItemCarousel(items) {
   };
 }
 
-app.listen(port, () => {
-  console.log(`🚀 伺服器啟動於 http://localhost:${port}`);
+app.listen(port, "0.0.0.0", () => {
+  console.log(`🚀 伺服器啟動於 http://0.0.0.0:${port}`);
 });
