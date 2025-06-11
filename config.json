@@ -1,0 +1,11 @@
+{
+  "target_locations": [
+    "台北市/中正區",
+    "台北市/信義區",
+    "新北市/板橋區",
+    "新北市/永和區"
+  ],
+  "output_filename": "data.csv"
+}
+
+  
